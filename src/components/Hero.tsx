@@ -1,6 +1,6 @@
 import { Button } from "./ui/button";
 import { buttonVariants } from "./ui/button";
-import { HeroCards } from "./HeroCards";
+// import { HeroCards } from "./HeroCards";
 import { BookmarkIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 import Brain from "./icons/brain";
 
