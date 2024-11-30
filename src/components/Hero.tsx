@@ -2,6 +2,7 @@ import { Button } from "./ui/button";
 import { buttonVariants } from "./ui/button";
 import { HeroCards } from "./HeroCards";
 import { BookmarkIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
+import Brain from "./icons/brain";
 
 export const Hero = () => {
   return (
@@ -44,7 +45,8 @@ export const Hero = () => {
 
       {/* Hero cards sections */}
       <div className="z-10">
-        <HeroCards />
+        {/* <HeroCards /> */}
+        <Brain />
       </div>
 
       {/* Shadow effect */}
