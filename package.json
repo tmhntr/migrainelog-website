@@ -1,10 +1,10 @@
 {
-  "name": "shadcn-landing-page-template",
-  "description": "Landing page template utilizing Shadcn, React, Typescript, and Tailwind CSS for rapid development and responsive design.",
+  "name": "migrainelog-landing-page",
+  "description": "A responsive landing page for the MigraineLog app.",
   "author": {
-    "name": "Leopoldo Miranda",
-    "email": "leomirandadev@gmail.com",
-    "url": "https://github.com/leoMirandaa"
+    "name": "Timothy Hunter",
+    "email": "timhunter98@gmail.com",
+    "url": "https://github.com/tmhntr"
   },
   "license": "MIT",
   "keywords": [

@@ -7,12 +7,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import Linkedin from "@/components/icons/linkedin";
+import Facebook from "@/components/icons/facebook";
+import Github from "@/components/icons/github";
 
 interface TeamProps {
   imageUrl: string;
   name: string;
   position: string;
+  blurb: string;
   socialNetworks: SociaNetworkslProps[];
 }
 
@@ -23,72 +26,19 @@ interface SociaNetworkslProps {
 
 const teamList: TeamProps[] = [
   {
-    imageUrl: "https://i.pravatar.cc/150?img=35",
-    name: "Emma Smith",
+    imageUrl: "https://avatars.githubusercontent.com/u/64655620?v=4",
+    name: "Tim Hunter",
     position: "Product Manager",
+    blurb: "I'm a hobbyist developer and I love to build things that help people.",
     socialNetworks: [
       {
         name: "Linkedin",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
+        url: "https://www.linkedin.com/in/tmhntr/",
       },
       {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
-      },
-    ],
-  },
-  {
-    imageUrl: "https://i.pravatar.cc/150?img=60",
-    name: "John Doe",
-    position: "Tech Lead",
-    socialNetworks: [
-      {
-        name: "Linkedin",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-      {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
-      },
-    ],
-  },
-  {
-    imageUrl: "https://i.pravatar.cc/150?img=36",
-    name: "Ashley Ross",
-    position: "Frontend Developer",
-    socialNetworks: [
-      {
-        name: "Linkedin",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
-      },
-    ],
-  },
-  {
-    imageUrl: "https://i.pravatar.cc/150?img=17",
-    name: "Bruce Rogers",
-    position: "Backend Developer",
-    socialNetworks: [
-      {
-        name: "Linkedin",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-      {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
-      },
+        name: "GitHub",
+        url: "https://github.com/tmhntr"
+      }
     ],
   },
 ];
@@ -97,13 +47,13 @@ export const Team = () => {
   const socialIcon = (iconName: string) => {
     switch (iconName) {
       case "Linkedin":
-        return <Linkedin size="20" />;
+        return <Linkedin size={20} />;
 
       case "Facebook":
-        return <Facebook size="20" />;
+        return <Facebook size={20}  />;
 
-      case "Instagram":
-        return <Instagram size="20" />;
+      case "GitHub":
+        return <Github size={20}/>;
     }
   };
 
@@ -120,13 +70,12 @@ export const Team = () => {
       </h2>
 
       <p className="mt-4 mb-10 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
+        They work on a voluntary basis to bring this product to you free of charge!
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10">
         {teamList.map(
-          ({ imageUrl, name, position, socialNetworks }: TeamProps) => (
+          ({ imageUrl, name, position, socialNetworks, blurb }: TeamProps) => (
             <Card
               key={name}
               className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center"
@@ -144,7 +93,7 @@ export const Team = () => {
               </CardHeader>
 
               <CardContent className="text-center pb-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>{blurb}</p>
               </CardContent>
 
               <CardFooter>
